@@ -1,0 +1,25 @@
+[global_config]
+  dbus = False
+  title_transmit_bg_color = "#f57900"
+  title_inactive_bg_color = "#d3d7cf"
+  inactive_color_offset = 1.0
+  enabled_plugins = CustomCommandsMenu, LaunchpadCodeURLHandler, APTURLHandler, LaunchpadBugURLHandler
+[keybindings]
+  help = None
+[profiles]
+  [[default]]
+    icon_bell = False
+    background_darkness = 0.83
+    background_type = transparent
+    cursor_color = "#aaaaaa"
+    scrollback_lines = 10000
+[layouts]
+  [[default]]
+    [[[child1]]]
+      parent = window0
+      profile = default
+      type = Terminal
+    [[[window0]]]
+      parent = ""
+      type = Window
+[plugins]

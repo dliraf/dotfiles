@@ -1,0 +1,69 @@
+#!/bin/bash
+
+yay -S --needed --norebuild --nouseask --noredownload --noconfirm --batchinstall \
+  alias-tips-git \
+  act \
+  asciinema \
+  atool \
+  bat \
+  bcal-git \
+  bmon \
+  buf-bin \
+  cheat \
+  cloc \
+  ctags \
+  diff-so-fancy \
+  direnv \
+  elinks \
+  fasd \
+  fd \
+  ffmpegthumbnailer \
+  git \
+  git-extras \
+  git-open-git \
+  git-quick-stats \
+  github-cli \
+  go-pie \
+  google-cloud-sdk \
+  gtop \
+  hexcurse-git \
+  highlight \
+  howdoi \
+  http-prompt \
+  httpie \
+  httplab \
+  jdk-openjdk \
+  jq \
+  lazygit \
+  libcaca \
+  mediainfo \
+  mtr \
+  nano-syntax-highlighting \
+  ncdu \
+  ncspot \
+  nmap \
+  npm \
+  nodejs-git-stats \
+  odt2txt \
+  openjdk-src \
+  poppler \
+  protobuf-go \
+  python-chardet \
+  ranger \
+  ripgrep \
+  the_silver_searcher \
+  tldr \
+  tmux \
+  unzip \
+  virtualbox \
+  youtube-dl \
+  yq \
+  ytop \
+  woof \
+  wttr \
+  wuzz
+
+for kernel in $(mhwd-kernel -li | grep " linux" | awk '{print $2}')
+do
+  yes | yay -S $kernel-virtualbox-host-modules
+done

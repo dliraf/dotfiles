@@ -1,0 +1,75 @@
+# k8s
+kubectl port-forward svc/<svc-name> 8080:80 --namespace <ns>
+kube-prompt
+kubetail
+kubectx
+k9s
+
+# Docker
+dockly
+dry
+
+# gRPC
+grpcurl
+
+# Share file (HTTP)
+woof
+
+# Lines of code
+cloc
+
+# Traceroute
+mtr
+
+# Certificate check
+openssl s_client -showcerts -connect <host>:<port> -servername <hostname>
+
+# Interactive web server
+httplab
+
+# Disk usage
+ncdu
+
+# Monitoring
+gtop
+dstat
+glances
+dstat
+gotop
+
+# GIT
+git-open
+git-quick-stats
+git extras
+
+# File browser
+ranger
+
+# Record terminal
+terminalizer
+
+# Helpful snippets
+tldr
+
+# HTTP
+wuzz
+
+# Search/grep
+ag (source code)
+rg
+
+# Directory bookmark
+goto
+
+# Snippets
+sman
+
+# Weather
+wego
+ansiweather
+
+# GRPC CLI
+grpc_cli call localhost:8091 GetMeteringPoint 'meteringPointId: "asdf"'
+
+# json
+fx

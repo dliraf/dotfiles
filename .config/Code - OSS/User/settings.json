@@ -1,0 +1,52 @@
+{
+    "files.exclude": {
+        "**/.classpath": true,
+        "**/.factorypath": true,
+        "**/.gitattributes": true,
+        "**/.github": true,
+        "**/.gitignore": true,
+        "**/.gradle": true,
+        "**/.project": true,
+        "**/.settings": true,
+        "**/bin": true,
+        "**/build": true,
+        "**/gradle": true
+    },
+    "editor.suggestSelection": "first",
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "java.jdt.ls.vmargs": "-XX:+UseParallelGC -XX:GCTimeRatio=4 -XX:AdaptiveSizePolicyWeight=90 -Dsun.zip.disableMemoryMapping=true -Xmx1G -Xms100m",
+    "todohighlight.defaultStyle": {
+        "color": "red",
+        "backgroundColor": "rgba(0,0,0,.2)",
+        "overviewRulerColor": "#ffab00",
+        "cursor": "pointer",
+        "border": "1px solid #eee",
+        "borderRadius": "2px",
+        "isWholeLine": false,
+    },
+    "todohighlight.keywords": [
+        {
+            "text": "$todo",
+            "color": "red",
+            "border": "1px solid red",
+        },
+        {
+            "text": "TODO",
+            "color": "red",
+            "border": "1px solid red",
+        }
+    ],
+    "todohighlight.include": [
+        "**/*.java",
+        "**/*.js",
+        "**/*.jsx",
+        "**/*.ts",
+        "**/*.tsx",
+        "**/*.html",
+        "**/*.php",
+        "**/*.css",
+        "**/*.scss"
+    ],
+    "window.zoomLevel": 0,
+    "workbench.iconTheme": "material-icon-theme"
+}

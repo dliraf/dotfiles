@@ -1,0 +1,19 @@
+#!/bin/bash
+
+if [ $USER != "arild" ]; then
+  exit 0
+fi
+
+# Because Git submodule commands cannot operate without a work tree, they must
+# be run from within $HOME (assuming this is the root of your dotfiles)
+cd "$HOME"
+
+echo "Update submodules"
+yadm submodule update --recursive --remote
+
+if [ ! -f ~/Env/gcp/.envrc ]; then
+  ln -s ~/.yadm-private/Env/gcp/.envrc ~/Env/gcp/.envrc
+  direnv allow ~/Env/gcp/.envrc
+fi
+
+direnv allow ~/Env/minikube

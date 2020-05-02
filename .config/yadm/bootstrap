@@ -1,0 +1,60 @@
+#!/bin/bash
+
+export GOPATH=~/.go
+
+install_packages()
+{
+  if [ -f "$1.md5" ]; then
+    md5sum -c $1.md5
+    if [ $? -eq 0 ]
+    then
+      echo "Not updating packages as '$1' hasn't changed"
+    else
+      $1
+      md5sum $1 > $1.md5
+    fi
+  else
+      $1
+      md5sum $1 > $1.md5
+  fi
+}
+
+install_packages ~/.config/yadm/bootstrap-packages
+install_packages ~/.config/yadm/bootstrap-packages-misc
+install_packages ~/.config/yadm/bootstrap-packages-containers
+install_packages ~/.config/yadm/bootstrap-packages-gui
+
+sudo vboxreload
+
+sudo cp ~/.config/yadm/pi-hole /etc/NetworkManager/dispatcher.d/pi-hole
+sudo chown root:root /etc/NetworkManager/dispatcher.d/pi-hole
+sudo chmod 755 /etc/NetworkManager/dispatcher.d/pi-hole
+
+sudo systemctl enable docker.service
+
+sudo gpasswd -a $USER vboxusers
+sudo gpasswd -a $USER docker
+
+# Nextcloud instead
+[[ -d ~/Desktop ]] && rmdir ~/Desktop
+[[ -d ~/Documents ]] && rmdir ~/Documents
+[[ -d ~/Music ]] && rmdir ~/Music
+[[ -d ~/Pictures ]] && rmdir ~/Pictures
+[[ -d ~/Public ]] && rmdir ~/Public
+[[ -d ~/Templates ]] && rmdir ~/Templates
+[[ -d ~/Videos ]] && rmdir ~/Videos
+
+[[ "$SHELL" == "/bin/zsh" ]] && echo "Shell is already zsh" || chsh -s /bin/zsh
+
+betterlockscreen -u ~/.wallpapers/wallpaper.png
+
+git config --global core.pager "diff-so-fancy | less --tabs=4 -RFX"
+
+yadm submodule update --init --recursive
+
+if [ -z "$(gcloud auth list --filter=status:ACTIVE --format="value(account)")" ]; then
+  echo "Not authenticated to Google GCP"
+  echo "Run the following two commands to authenticate:"
+  echo "gcloud auth login"
+  echo "gcloud auth application-default login"
+fi

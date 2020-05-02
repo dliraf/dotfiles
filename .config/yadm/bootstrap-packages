@@ -1,0 +1,42 @@
+#!/bin/bash
+
+# https://github.com/Jguer/yay/issues/885
+# yay -S --noconfirm $(yay -Qi $@ 2>&1 >/dev/null | grep "error: package" | grep "was not found" | cut -d"'" -f2 | tr "\n" " ")
+yes | yay
+
+# A package below triggers a replacement of i3lock with i3lock-color. --no-confirm therefore breaks as the answer is no by default
+yes | yay -S i3lock-color
+
+# Replaces dnsmasq
+yes | yay -S pi-hole-standalone
+
+# npm Because of nodejs-git-stats
+yay -S --needed --norebuild --nouseask --noredownload --noconfirm --batchinstall \
+  autorandr \
+  betterlockscreen \
+  bumblebee-status \
+  flameshot \
+  fzf \
+  fzf-extras \
+  i3wsr \
+  keychain \
+  lightdm-webkit-theme-aether \
+  nerd-fonts-terminus \
+  oh-my-zsh-git \
+  paprefs \
+  pasystray \
+  pavucontrol \
+  powerline-fonts \
+  pulseaudio \
+  pulseaudio-bluetooth \
+  pulsemixer \
+  rofi \
+  ruby-colorls \
+  terminator \
+  thefuck \
+  ttf-font-awesome-4 \
+  w3m \
+  zsh \
+  zsh-autosuggestions \
+  zsh-syntax-highlighting \
+  zsh-theme-powerlevel10k

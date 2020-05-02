@@ -1,0 +1,8 @@
+cp2clip() {
+if [ $# -eq 1 ]
+then
+  xclip -sel c <  $1
+else
+  echo "'cp2clip file'"
+fi
+}

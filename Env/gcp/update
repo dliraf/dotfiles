@@ -1,0 +1,70 @@
+#!/bin/bash
+
+if [ -z "${GCP_ORGANIZATION}" ]; then
+    echo "GCP_ORGANIZATION not set"
+    echo "Please create a .envrc file in the same directory as this 'update' file"
+    echo "GCP_ORGANIZATION=<Google GCP organization id>"
+    echo ""
+    echo "Don't forget 'direnv allow' afterwards to to enable loading of the file"
+    exit
+fi
+
+ORG_DIR=$PWD
+declare -A folders
+
+IFS=$'\n'
+for folder in $(gcloud alpha resource-manager folders list --quiet --organization=$GCP_ORGANIZATION --format "value(DISPLAY_NAME,ID)")
+do
+  echo "Found folder: $folder"
+  # No hierarchical support for folders
+  name=`echo $folder | awk '{ print $1 }'`
+  id=`echo $folder | awk '{ print $2 }'`
+  folders[$id]="$ORG_DIR/$name"
+  [ ! -d "$name" ] && mkdir -p "$name"
+done
+
+get_clusters () {
+  for cluster in $(gcloud container clusters list --project $1 --format "value(name)")
+  do
+    echo ""
+    echo "Handling cluster: $cluster"
+    cluster_dir=$2/$cluster
+    [ ! -d "$cluster_dir" ] && mkdir -p "$cluster_dir"
+
+    export KUBECONFIG=$cluster_dir/.kubeconfig
+    gcloud container clusters get-credentials $cluster --project $1 --quiet --region europe-north1 > /dev/null 2>&1
+    echo "export KUBECONFIG=$cluster_dir/.kubeconfig" > $cluster_dir/.envrc
+    echo "source_up" >> $cluster_dir/.envrc
+    cp .update-namespaces.template $cluster_dir/update-namespaces
+    direnv allow $cluster_dir
+    cd $cluster_dir
+    echo "Updating namespaces for cluster, $cluster"
+    ./update-namespaces
+    cd -
+  done
+}
+
+get_projects () {
+  for project in $(gcloud projects list --format "value(PROJECT_ID)")
+  do
+    PARENT_FOLDER=`gcloud projects get-ancestors $project --quiet --format "value(ID)" | head -2 | sed "1 d"`
+    echo ""
+    echo "Handling project, $project. Folder=$PARENT_FOLDER"
+    ROOT_FOLDER=`echo "${folders[$PARENT_FOLDER]}"`
+    if [ -z "$ROOT_FOLDER" ]
+    then
+      # No folder, Organization level
+      ROOT_FOLDER=$ORG_DIR
+    fi
+
+    project_dir=`echo "$ROOT_FOLDER/$project"`
+    [ ! -d "$project_dir" ] && mkdir -p "$project_dir"
+    echo "export CLOUDSDK_CORE_PROJECT=$project" > $project_dir/.envrc
+    echo "source_up" >> $project_dir/.envrc
+    direnv allow $project_dir 
+    get_clusters "$project" "$project_dir"
+  done
+}
+
+get_projects
+

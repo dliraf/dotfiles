@@ -1,0 +1,16 @@
+#!/bin/bash
+
+if [[ ! -f "$HOME/.openconnect-proxy.env" ]]
+then
+    echo "~/.openconnect-proxy.env is missing"
+    echo "To be able to use this script you must create that file and add the following two lines"
+    echo "OPENCONNECT_URL=<juniper url>"
+    echo "OPENCONNECT_USER=<your username>"
+    echo ""
+    echo "Afterwards configure your browser to use 127.0.0.1:8889 as a SOCKS5 proxy"
+    echo "Don't forget to enable the DNS lookup over SOCKS option"
+    echo "Recommend to use the palemoon browser (based on Firefox) as it's easier to have a dedicated browser instead of constantly changing the settings"
+    exit
+fi
+
+docker run -it --rm --privileged --env-file=$HOME/.openconnect-proxy.env -e OPENCONNECT_OPTIONS='--juniper' -p 8888:8888 -p 8889:8889 wazum/openconnect-proxy:latest

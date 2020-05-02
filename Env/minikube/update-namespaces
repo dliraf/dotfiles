@@ -1,0 +1,12 @@
+#!/bin/bash
+
+#for namespace in $(kubectl get namespaces -o custom-columns=":metadata.name")
+for namespace in $(kubectl --context=$KUBECTL_CONTEXT get namespaces -o custom-columns=":metadata.name")
+do
+  namespace_dir=./$namespace
+  [ ! -d "$namespace_dir" ] && mkdir -p "$namespace_dir"
+
+  echo "export KUBECTL_NAMESPACE=$namespace" > $namespace_dir/.envrc
+  echo "source_up" >> $namespace_dir/.envrc
+  direnv allow $namespace_dir
+done

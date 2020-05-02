@@ -1,0 +1,3 @@
+#!/bin/bash
+#@todo host:port as arg
+grpc_cli call localhost:8090 grpc.health.v1.Health/Check 'service: ""'

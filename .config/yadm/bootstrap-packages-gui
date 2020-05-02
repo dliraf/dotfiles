@@ -1,0 +1,16 @@
+#!/bin/bash
+
+yay -S --needed --norebuild --nouseask --noredownload --noconfirm --batchinstall \
+  chromium \
+  code \
+  dbeaver \
+  dropbox \
+  gitkraken \
+  kdiff3 \
+  keepassxc \
+  libreoffice-fresh \
+  nextcloud-client \
+  pcmanfm \
+  slack-desktop \
+  spotify \
+  sublime-text-dev 

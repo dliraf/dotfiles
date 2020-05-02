@@ -1,0 +1,6 @@
+log:
+  # false still creates an empty dive.log file. Use /tmp instead
+  enabled: false
+  path: /tmp/dive.log
+  level: info
+

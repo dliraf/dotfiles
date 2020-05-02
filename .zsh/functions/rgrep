@@ -1,0 +1,13 @@
+rgrep() {
+if [ $# -eq 2 ]
+then
+#  find . -type f -print | xargs grep $1
+  find . \( ! -regex '.*/\..*' \) -type f -name "$1" -exec grep -n -i -H --color=auto $2 {} \;
+elif [ $# -eq 3 ]
+then
+  #find $1 -type f -print | xargs grep $2
+  find $1 \( ! -regex '.*/\..*' \) -type f -name "$2" -exec grep -n -i -H --color=auto $3 {} \;
+else
+  echo "'rgrep filePattern pattern' or 'rgrep path filePattern pattern'"
+fi
+}

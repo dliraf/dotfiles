@@ -1,0 +1,11 @@
+rfind() {
+if [ $# -eq 1 ]
+then
+  find . \( ! -regex '.*/\..*' \) -type f -name "$1"
+elif [ $# -eq 2 ]
+then
+  find $1 \( ! -regex '.*/\..*' \) -type f -name "$2"
+else
+  echo "'rfind filePattern' or 'rfind path filePattern'"
+fi
+}

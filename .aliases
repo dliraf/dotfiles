@@ -1,0 +1,53 @@
+alias extip='curl http://ipecho.net/plain; echo'
+
+alias i3-cheat="grep '^bind' .i3/config | cut -d \" \" -f 2- | sed --unbuffered 's/ /Å/' | column -t -s'Å'"
+
+alias microphone-test-enable='pactl load-module module-loopback'
+alias microphone-test-diable='pactl unload-module module-loopback'
+
+alias ..='cd ..'
+alias c='clear'
+#alias ls='ls --color=auto --group-directories-first'
+#alias l='ls -lh'
+
+alias mkdir="mkdir -p"
+alias e="$EDITOR"
+alias v="$VISUAL"
+
+# Pretty print the path
+alias path='echo $PATH | tr -s ":" "\n"'
+
+#alias catc='pygmentize -g'
+alias free='free -mt'
+alias df='df -h --exclude-type=devtmpfs --exclude-type=tmpfs --exclude-type=fuse.gvfs-fuse-daemon --print-type'
+alias dud='du -c -h'
+alias dud1='du -c -h --max-depth=1 --exclude=.mnt'
+alias hex='hexcurse'
+#alias l='ls -lh --group-directories-first'
+alias l='colorls -l --group-directories-first'
+alias lt='colorls -l --tree --group-directories-first'
+alias lszip='jar tf'
+alias lo='l --block-size=M --sort=size -l'
+alias utar='tar -xvf'
+alias gw='./gradlew'
+#alias gradle='./gradlew'
+alias n=nnn
+alias json=fx
+
+# https://github.com/gradle/gradle/issues/2039
+#alias gradlew="gradlew --console rich"
+#alias ./gradlew="./gradlew --console rich"
+
+# https://github.com/kubernetes/kubernetes/issues/27308
+alias kubectl='/usr/bin/kubectl "--context=${KUBECTL_CONTEXT:-$(/usr/bin/kubectl config current-context)}" ${KUBECTL_NAMESPACE/[[:alnum:]-]*/--namespace=${KUBECTL_NAMESPACE}}'
+#alias k='/usr/bin/kubectl "--context=${KUBECTL_CONTEXT:-$(kubectl config current-context)}" ${KUBECTL_NAMESPACE/[[:alnum:]-]*/--namespace=${KUBECTL_NAMESPACE}}'
+#alias k='kubectl'
+alias k9s='/usr/bin/k9s "--context=${KUBECTL_CONTEXT:-$(kubectl config current-context)}" ${KUBECTL_NAMESPACE/[[:alnum:]-]*/--namespace=${KUBECTL_NAMESPACE}}'
+
+if [[ -f ~/.aliases.local ]]; then
+  source ~/.aliases.local
+fi
+
+if [[ -f ~/.aliases.private ]]; then
+  source ~/.aliases.private
+fi
