@@ -12,10 +12,12 @@ yes | yay -S pi-hole-standalone
 
 # npm Because of nodejs-git-stats
 yay -S --needed --norebuild --nouseask --noredownload --noconfirm --batchinstall \
+  alias-tips-git \
   autorandr \
   betterlockscreen \
   bumblebee-status \
   direnv \
+  fasd \
   flameshot \
   fzf \
   fzf-extras \

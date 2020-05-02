@@ -1,7 +1,6 @@
 #!/bin/bash
 
 yay -S --needed --norebuild --nouseask --noredownload --noconfirm --batchinstall \
-  alias-tips-git \
   act \
   asciinema \
   atool \
@@ -14,7 +13,6 @@ yay -S --needed --norebuild --nouseask --noredownload --noconfirm --batchinstall
   ctags \
   diff-so-fancy \
   elinks \
-  fasd \
   fd \
   ffmpegthumbnailer \
   git \
