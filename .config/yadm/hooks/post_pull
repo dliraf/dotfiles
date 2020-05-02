@@ -1,9 +1,5 @@
 #!/bin/bash
 
-if [ $USER != "arild" ]; then
-  exit 0
-fi
-
 # Because Git submodule commands cannot operate without a work tree, they must
 # be run from within $HOME (assuming this is the root of your dotfiles)
 cd "$HOME"
@@ -11,9 +7,16 @@ cd "$HOME"
 echo "Update submodules"
 yadm submodule update --recursive --remote
 
+direnv allow ~/Env/minikube
+
+BASEDIR=$(dirname "$0")
+if ! grep -q git@github.com:dliraf "$HOME/.config/yadm/repo.git/config"; then
+  exit
+fi
+
+# SSH access to my repo. I.e me so pull in some private dotfiles as well
+
 if [ ! -f ~/Env/gcp/.envrc ]; then
   ln -s ~/.yadm-private/Env/gcp/.envrc ~/Env/gcp/.envrc
   direnv allow ~/Env/gcp/.envrc
 fi
-
-direnv allow ~/Env/minikube
