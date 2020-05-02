@@ -7,6 +7,9 @@ yes | yay
 # A package below triggers a replacement of i3lock with i3lock-color. --no-confirm therefore breaks as the answer is no by default
 yes | yay -S i3lock-color
 
+# Replaces go (if installed) with go-pie
+yes | yay -S go-pie
+
 # Replaces dnsmasq
 yes | yay -S pi-hole-standalone
 
