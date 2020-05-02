@@ -1,0 +1,22 @@
+#!/bin/bash
+for fgcol in 30 31 32 33 34 35 36 37 -1; do
+  for bold in 0 1; do
+    for bgcol in 40 41 42 43 44 45 46 47 -1; do
+    # bg + fg
+    [[ ! $fgcol -eq -1 ]] && [[ ! $bgcol -eq -1 ]] && \
+        echo -ne "\033[${bold};${fgcol};${bgcol}m\\\\033[${bold};${fgcol};${bgcol}m\033[0m "
+    # only fg (last column)
+    [[ ! $fgcol -eq -1 ]] && [[   $bgcol -eq -1 ]] && \
+        echo -ne "\033[${bold};${fgcol}m\\\\033[${bold};${fgcol}m   \033[0m "
+    # only bg (last two rows)
+    [[   $fgcol -eq -1 ]] && [[ ! $bgcol -eq -1 ]] && \
+        echo -ne "\033[${bold};${bgcol}m\\\\033[${bold};${bgcol}m   \033[0m "
+    # only bold
+    [[   $fgcol -eq -1 ]] && [[   $bgcol -eq -1 ]] && \
+        echo -ne "\033[${bold}m\\\\033[${bold}m      \033[0m "
+    done
+    echo
+  done
+done
+# eof
+
