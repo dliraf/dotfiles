@@ -1,5 +1,13 @@
 #!/bin/bash
 
+if [ -z "$(gcloud auth list --filter=status:ACTIVE --format="value(account)")" ]; then
+  echo "Not authenticated to Google GCP"
+  echo "Run the following two commands to authenticate:"
+  echo "gcloud auth login"
+  echo "gcloud auth application-default login"
+  echo "Update"
+fi
+
 if [ -z "${GCP_ORGANIZATION}" ]; then
     echo "GCP_ORGANIZATION not set"
     echo "Please create a .envrc file in the same directory as this 'update' file"
