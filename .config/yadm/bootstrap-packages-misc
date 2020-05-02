@@ -37,7 +37,6 @@ yay -S --needed --norebuild --nouseask --noredownload --noconfirm --batchinstall
   mtr \
   nano-syntax-highlighting \
   ncdu \
-  ncspot \
   nmap \
   npm \
   nodejs-git-stats \
