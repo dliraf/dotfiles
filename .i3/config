@@ -164,6 +164,15 @@ mode "$mode_system" {
   bindsym Escape mode "default"
 }
 
+bindsym $mod+S mode "$mode_display"
+set $mode_display (d)ock, (s)tandalone, (p)rojector
+mode "$mode_display" {
+  bindsym d exec --no-startup-id autorandr --load dock, mode "default"
+  bindsym s exec --no-startup-id autorandr --load standalone, mode "default"
+  bindsym p exec --no-startup-id autorandr --load pj, mode "default"
+  bindsym Escape mode "default"
+}
+
 # Autostart applications
 exec --no-startup autorandr
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1

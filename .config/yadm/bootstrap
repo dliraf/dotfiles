@@ -53,4 +53,4 @@ git config --global core.pager "diff-so-fancy | less --tabs=4 -RFX"
 yadm submodule update --init --recursive
 
 # Invoke the post_pull hook as the initial clone doesn't run post hooks
-./.config/yadm/hooks/post_pull
+~/.config/yadm/hooks/post_pull
