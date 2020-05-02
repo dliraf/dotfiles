@@ -52,6 +52,9 @@ git config --global core.pager "diff-so-fancy | less --tabs=4 -RFX"
 
 yadm submodule update --init --recursive
 
+# Invoke the post_pull hook as the initial clone doesn't run post hooks
+./.config/yadm/hooks/post_pull
+
 if [ -z "$(gcloud auth list --filter=status:ACTIVE --format="value(account)")" ]; then
   echo "Not authenticated to Google GCP"
   echo "Run the following two commands to authenticate:"
