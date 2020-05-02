@@ -15,6 +15,7 @@ yay -S --needed --norebuild --nouseask --noredownload --noconfirm --batchinstall
   autorandr \
   betterlockscreen \
   bumblebee-status \
+  direnv \
   flameshot \
   fzf \
   fzf-extras \

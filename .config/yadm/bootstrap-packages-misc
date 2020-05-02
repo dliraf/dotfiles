@@ -13,7 +13,6 @@ yay -S --needed --norebuild --nouseask --noredownload --noconfirm --batchinstall
   cloc \
   ctags \
   diff-so-fancy \
-  direnv \
   elinks \
   fasd \
   fd \
