@@ -55,7 +55,6 @@ yay -S --needed --norebuild --nouseask --noredownload --noconfirm --batchinstall
   virtualbox \
   youtube-dl \
   yq \
-  ytop \
   woof \
   wttr \
   wuzz
