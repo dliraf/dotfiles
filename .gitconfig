@@ -1,5 +1,5 @@
 [include]
-  path = .gitconfig.user
+  path = ~/.dotfiles-private/.gitconfig.user
 
 [alias]
   # YADM-only

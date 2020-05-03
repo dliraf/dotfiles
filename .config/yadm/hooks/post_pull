@@ -30,11 +30,3 @@ if [ ! -f ~/Env/gcp/.envrc ]; then
   ln -sf ~/.dotfiles-private/Env/gcp/.envrc ~/Env/gcp/.envrc
   direnv allow ~/Env/gcp/.envrc
 fi
-
-if [ ! -f ~/.gitconfig.user ]; then
-  ln -sf ~/.dotfiles-private/.gitconfig.user ~/.gitconfig.user
-fi
-
-if [ ! -f ~/.gitconfig.user.techyon ]; then
-  ln -sf ~/.dotfiles-private/.gitconfig.user.techyon ~/.gitconfig.user.techyon
-fi
