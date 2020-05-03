@@ -145,3 +145,6 @@ load-module module-filter-apply
 ### Enable Echo/Noise-Cancellation
 # Without there is a lot of static noise
 load-module module-echo-cancel
+
+load-module module-switch-on-connect
+
