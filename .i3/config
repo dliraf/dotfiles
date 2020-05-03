@@ -15,7 +15,11 @@ hide_edge_borders none
 floating_modifier $mod
 
 bindsym $mod+Return exec terminator # Start a terminal
-bindsym $mod+Shift+q kill # Kill focused window
+
+# Kill focused window
+bindsym $mod+Shift+q kill 
+bindsym $mod+F4 kill
+
 bindsym $mod+d exec rofi -show run -font 'Noto Sans 8' # Start program launchr
 
 # launch categorized menu
@@ -188,6 +192,7 @@ exec --no-startup-id nextcloud
 exec --no-startup-id dropbox
 exec_always --no-startup-id i3wsr
 exec pasystray
+exec --no-startup-id pactl load-module module-switch-on-connect
 exec --no-startup-id xautolock -time 10 -locker 'betterlockscreen -l dim'
 exec --no-startup-id betterlockscreen -w dim
 exec_always --no-startup-id ff-theme-util
