@@ -47,4 +47,5 @@ _load_settings "$HOME/.zsh/configs"
 PATH=$PATH:~/bin
 
 # aliases
+[[ -f ~/.dotfiles-private/.aliases ]] && source ~/.dotfiles-private/.aliases
 [[ -f ~/.aliases ]] && source ~/.aliases
