@@ -25,7 +25,6 @@ then
 else
   git clone git@github.com:dliraf/dotfiles-private.git ~/.dotfiles-private
 fi
-git clone git@github.com:dliraf/dotfiles-private.git ~/.dotfiles-private
 
 if [ ! -f ~/Env/gcp/.envrc ]; then
   ln -s ~/.yadm-private/Env/gcp/.envrc ~/Env/gcp/.envrc
