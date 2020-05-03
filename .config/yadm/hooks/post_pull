@@ -27,7 +27,7 @@ else
 fi
 
 if [ ! -f ~/Env/gcp/.envrc ]; then
-  ln -s ~/.dotfiles-private/Env/gcp/.envrc ~/Env/gcp/.envrc
+  ln -sf ~/.dotfiles-private/Env/gcp/.envrc ~/Env/gcp/.envrc
   direnv allow ~/Env/gcp/.envrc
 fi
 
