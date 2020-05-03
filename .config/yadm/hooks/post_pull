@@ -17,7 +17,7 @@ fi
 # SSH access to my repo. I.e me so pull in some private dotfiles as well
 
 # No support for optional submodules in Git so clone and link instead
-if [ -d "~/.dotfiles-private" ] 
+if [ -d "$HOME/.dotfiles-private" ] 
 then
   cd ~/.dotfiles-private
   git pull
