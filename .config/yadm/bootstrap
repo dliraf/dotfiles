@@ -26,11 +26,8 @@ install_packages ~/.config/yadm/bootstrap-packages-gui
 
 sudo vboxreload
 
-sudo cp ~/.config/yadm/pi-hole /etc/NetworkManager/dispatcher.d/pi-hole
-sudo chown root:root /etc/NetworkManager/dispatcher.d/pi-hole
-sudo chmod 755 /etc/NetworkManager/dispatcher.d/pi-hole
-
 sudo systemctl enable docker.service
+sudo systemctl enable sshd.service
 
 sudo gpasswd -a $USER vboxusers
 sudo gpasswd -a $USER docker
