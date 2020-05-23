@@ -21,7 +21,7 @@ yay -S --needed --norebuild --nouseask --noredownload --noconfirm --batchinstall
   git-open-git \
   git-quick-stats \
   github-cli \
-  go-pie \
+  go \
   google-cloud-sdk \
   grpcurl \
   gtop \
