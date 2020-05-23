@@ -3,9 +3,10 @@
 if [ -z "$(gcloud auth list --filter=status:ACTIVE --format="value(account)")" ]; then
   echo "Not authenticated to Google GCP"
   echo "Run the following two commands to authenticate:"
-  echo "gcloud auth login"
-  echo "gcloud auth application-default login"
-  exit
+  echo "  gcloud auth login"
+  echo "  gcloud auth application-default login"
+  echo "And you probably want to run this unrelated command as well"
+  exit "  gcloud auth configure-docker"
 fi
 
 if [ -z "${GCP_ORGANIZATION}" ]; then
