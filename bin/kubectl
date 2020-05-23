@@ -1,0 +1,13 @@
+#!/bin/bash
+
+# Workaround for this, ttps://github.com/kubernetes/kubernetes/pull/85796
+
+if [ "$#" -gt "0" ]; then
+  if [[ "$1" == *"get"* || "$1" == *"describe"* || "$1" == *"edit"* || "$1" == *"delete"* || "$1" == *"logs"* || "$1" == *"exec"* ]]; then
+    /usr/bin/kubectl "--context=${KUBECTL_CONTEXT:-$(/usr/bin/kubectl config current-context)}" ${KUBECTL_NAMESPACE/[[:alnum:]-]*/--namespace=${KUBECTL_NAMESPACE}} $@
+    exit
+  fi
+fi
+
+/usr/bin/kubectl $@
+

@@ -39,7 +39,7 @@ alias json=fx
 #alias ./gradlew="./gradlew --console rich"
 
 # https://github.com/kubernetes/kubernetes/issues/27308
-alias kubectl='/usr/bin/kubectl "--context=${KUBECTL_CONTEXT:-$(/usr/bin/kubectl config current-context)}" ${KUBECTL_NAMESPACE/[[:alnum:]-]*/--namespace=${KUBECTL_NAMESPACE}}'
+#alias kubectl='/usr/bin/kubectl "--context=${KUBECTL_CONTEXT:-$(/usr/bin/kubectl config current-context)}" ${KUBECTL_NAMESPACE/[[:alnum:]-]*/--namespace=${KUBECTL_NAMESPACE}}'
 #alias k='/usr/bin/kubectl "--context=${KUBECTL_CONTEXT:-$(kubectl config current-context)}" ${KUBECTL_NAMESPACE/[[:alnum:]-]*/--namespace=${KUBECTL_NAMESPACE}}'
 #alias k='kubectl'
 alias k9s='/usr/bin/k9s "--context=${KUBECTL_CONTEXT:-$(kubectl config current-context)}" ${KUBECTL_NAMESPACE/[[:alnum:]-]*/--namespace=${KUBECTL_NAMESPACE}}'
