@@ -6,7 +6,7 @@ if [ -z "$(gcloud auth list --filter=status:ACTIVE --format="value(account)")" ]
   echo "  gcloud auth login"
   echo "  gcloud auth application-default login"
   echo "And you probably want to run this unrelated command as well"
-  exit "  gcloud auth configure-docker"
+  echo "  gcloud auth configure-docker"
 fi
 
 if [ -z "${GCP_ORGANIZATION}" ]; then
