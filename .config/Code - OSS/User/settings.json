@@ -78,6 +78,7 @@
     "todo-tree.tree.showScanModeButton": false,
     "dashboard.projectData": null,
     "workbench.startupEditor": "newUntitledFile",
-    "go.toolsGopath": "~/.go"
+    "go.toolsGopath": "~/.go",
+    "local-history.path": "~/.config/Code - OSS"
     
 }
