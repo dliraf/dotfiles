@@ -48,5 +48,36 @@
         "**/*.scss"
     ],
     "window.zoomLevel": 0,
-    "workbench.iconTheme": "material-icon-theme"
+    "workbench.iconTheme": "material-icon-theme",
+    "workbench.colorTheme": "Dracula",
+    "java.semanticHighlighting.enabled": true,
+    "cSpell.userWords": [
+        "autoconfigure",
+        "grpc",
+        "grpcstarter",
+        "springframework",
+        "techyon"
+    ],
+    "go.useLanguageServer": true,
+    "editor.fontSize": 12,
+    "editor.fontLigatures": true,
+    "indentRainbow.colors": [
+        "rgba(20,20,20,0.3)",
+        "rgba(50,50,50,0.3)",
+        "rgba(80,80,80,0.3)",
+        "rgba(110,110,110,0.3)",
+        "rgba(140,140,140,0.3)"
+    ],
+    "indentRainbow.errorColor": "rgba(128,32,32,0)",
+    "java.imports.gradle.wrapper.checksums": [
+        {
+            "sha256": "96f793a18e056c23ffeec67c1f3bb8eccff5a4a407fc9ceac183527e7eedf4b6",
+            "allowed": true
+        }
+    ],
+    "todo-tree.tree.showScanModeButton": false,
+    "dashboard.projectData": null,
+    "workbench.startupEditor": "newUntitledFile",
+    "go.toolsGopath": "~/.go"
+    
 }
