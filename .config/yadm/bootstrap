@@ -24,6 +24,8 @@ install_packages ~/.config/yadm/bootstrap-packages-misc
 install_packages ~/.config/yadm/bootstrap-packages-containers
 install_packages ~/.config/yadm/bootstrap-packages-gui
 
+~/.config/yadm/bootstrap-vscode
+
 sudo vboxreload
 
 sudo systemctl enable docker.service

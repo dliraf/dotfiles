@@ -1,0 +1,7 @@
+#!/bin/bash
+
+while read EXTENSION
+do
+    echo  "Install VSCode Extension: $EXTENSION"
+    code --install-extension $EXTENSION
+done < $HOME/.config/yadm/vscode-extensions.txt
