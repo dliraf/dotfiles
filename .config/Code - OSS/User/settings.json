@@ -59,8 +59,12 @@
         "techyon"
     ],
     "go.useLanguageServer": true,
-    "editor.fontSize": 12,
+    "editor.fontSize": 12
     "editor.fontLigatures": true,
+    "editor.fontWeight": "300" // Light
+    "editor.fontWeight": "400" // Regular
+    "editor.fontWeight": "500" // Medium
+    "editor.fontWeight": "600" // Bold
     "indentRainbow.colors": [
         "rgba(20,20,20,0.3)",
         "rgba(50,50,50,0.3)",
@@ -79,6 +83,10 @@
     "dashboard.projectData": null,
     "workbench.startupEditor": "newUntitledFile",
     "go.toolsGopath": "~/.go",
-    "local-history.path": "~/.config/Code - OSS"
-    
+    "local-history.path": "~/.config/Code - OSS",
+    "telemetry.enableTelemetry": false,
+    "editor.rulers": [
+        180
+    ],
+    "editor.fontFamily": "Fira Code"
 }
