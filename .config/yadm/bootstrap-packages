@@ -7,9 +7,6 @@ yes | yay
 # A package below triggers a replacement of i3lock with i3lock-color. --no-confirm therefore breaks as the answer is no by default
 yes | yay -S i3lock-color
 
-# Some packages have a dependency to go-pie
-yes | yay -S go-pie
-
 # npm Because of nodejs-git-stats
 yay -S --needed --norebuild --nouseask --noredownload --noconfirm --batchinstall \
   alias-tips-git \
@@ -37,6 +34,7 @@ yay -S --needed --norebuild --nouseask --noredownload --noconfirm --batchinstall
   ruby-colorls \
   terminator \
   thefuck \
+  ttf-fira-code
   ttf-font-awesome-4 \
   w3m \
   zsh \
