@@ -5,4 +5,4 @@ SAVEHIST=4096
 
 export ERL_AFLAGS="-kernel shell_history enabled"
 
-#setopt no_share_history
+setopt no_share_history
