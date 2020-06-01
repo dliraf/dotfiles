@@ -15,3 +15,4 @@ COMPLETION_WAITING_DOTS="true"
 export BROWSER=/usr/bin/chromium
 
 export GOPATH=~/.go
+export GOROOT=/usr/lib/go/

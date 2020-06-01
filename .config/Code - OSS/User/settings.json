@@ -55,16 +55,14 @@
         "autoconfigure",
         "grpc",
         "grpcstarter",
+        "nett",
         "springframework",
         "techyon"
     ],
     "go.useLanguageServer": true,
-    "editor.fontSize": 12
+    "editor.fontSize": 12,
     "editor.fontLigatures": true,
-    "editor.fontWeight": "300" // Light
-    "editor.fontWeight": "400" // Regular
-    "editor.fontWeight": "500" // Medium
-    "editor.fontWeight": "600" // Bold
+    "editor.fontWeight": "400",
     "indentRainbow.colors": [
         "rgba(20,20,20,0.3)",
         "rgba(50,50,50,0.3)",
@@ -80,7 +78,6 @@
         }
     ],
     "todo-tree.tree.showScanModeButton": false,
-    "dashboard.projectData": null,
     "workbench.startupEditor": "newUntitledFile",
     "go.toolsGopath": "~/.go",
     "local-history.path": "~/.config/Code - OSS",
@@ -88,5 +85,6 @@
     "editor.rulers": [
         180
     ],
-    "editor.fontFamily": "Fira Code"
+    "editor.fontFamily": "Fira Code",
+    "dashboard.projectData": null
 }
