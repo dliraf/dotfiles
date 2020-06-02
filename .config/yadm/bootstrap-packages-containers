@@ -11,6 +11,7 @@ yay -S --needed --norebuild --nouseask --noredownload --noconfirm --batchinstall
   kube-score \
   kubebox \
   kubectx \
+  kubespy \
   helm \
   kubetail \
   minikube-bin \
