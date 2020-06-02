@@ -16,6 +16,7 @@ yay -S --needed --norebuild --nouseask --noredownload --noconfirm --batchinstall
   elinks \
   fd \
   ffmpegthumbnailer \
+  firefox \
   git \
   git-extras \
   git-open-git \
@@ -30,7 +31,7 @@ yay -S --needed --norebuild --nouseask --noredownload --noconfirm --batchinstall
   http-prompt \
   httpie \
   httplab \
-  jdk-openjdk \
+  jdk11-openjdk \
   jq \
   lazygit \
   libcaca \
@@ -42,7 +43,7 @@ yay -S --needed --norebuild --nouseask --noredownload --noconfirm --batchinstall
   npm \
   nodejs-git-stats \
   odt2txt \
-  openjdk-src \
+  openjdk11-src \
   poppler \
   protobuf-go \
   python-chardet \
