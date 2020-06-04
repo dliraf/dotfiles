@@ -3,6 +3,7 @@
 yay -S --needed --norebuild --nouseask --noredownload --noconfirm --batchinstall \
   dive \
   docker \
+  docker-compose \
   dockly \
   fluxctl-bin \
   istio-bin \
