@@ -60,3 +60,4 @@ wayou.vscode-todo-highlight
 xyz.local-history
 yzhang.markdown-all-in-one
 zhuangtongfa.material-theme
+zxh404.vscode-proto3

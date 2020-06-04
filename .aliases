@@ -50,6 +50,4 @@ if [[ -f ~/.aliases.local ]]; then
   source ~/.aliases.local
 fi
 
-if [[ -f ~/.aliases.private ]]; then
-  source ~/.aliases.private
-fi
+
