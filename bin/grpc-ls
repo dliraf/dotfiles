@@ -1,0 +1,3 @@
+#!/bin/bash
+#@todo host:port as arg
+grpc_cli ls localhost:8090
