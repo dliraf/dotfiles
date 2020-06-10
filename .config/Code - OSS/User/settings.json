@@ -53,6 +53,7 @@
     "java.semanticHighlighting.enabled": true,
     "cSpell.userWords": [
         "autoconfigure",
+        "biodome",
         "grpc",
         "grpcstarter",
         "nett",
