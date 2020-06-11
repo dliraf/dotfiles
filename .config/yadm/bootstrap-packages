@@ -37,6 +37,7 @@ yay -S --needed --norebuild --nouseask --noredownload --noconfirm --batchinstall
   ttf-fira-code
   ttf-font-awesome-4 \
   w3m \
+  xclip \
   zsh \
   zsh-autosuggestions \
   zsh-syntax-highlighting \
