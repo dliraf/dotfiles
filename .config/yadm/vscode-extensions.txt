@@ -1,8 +1,10 @@
 aaron-bond.better-comments
 alefragnani.project-manager
+artdiniz.quitcontrol-vscode
 christian-kohler.npm-intellisense
 christian-kohler.path-intellisense
 CoenraadS.bracket-pair-colorizer
+cssho.vscode-svgviewer
 DavidAnson.vscode-markdownlint
 dbaeumer.vscode-eslint
 dgileadi.java-decompiler
@@ -15,6 +17,7 @@ formulahendry.auto-close-tag
 formulahendry.auto-rename-tag
 formulahendry.code-runner
 foxundermoon.shell-format
+fwcd.kotlin
 GitHub.vscode-pull-request-github
 Gruntfuggly.todo-tree
 IBM.output-colorizer
@@ -22,9 +25,11 @@ johnpapa.vscode-peacock
 kamikillerto.vscode-colorize
 karigari.chat
 kenhowardpdx.vscode-gist
+kisstkondoros.vscode-gutter-preview
 KnisterPeter.vscode-github
 kruemelkatze.vscode-dashboard
 lostintangent.vsls-whiteboard
+mads-hartmann.bash-ide-vscode
 mhutchie.git-graph
 mikestead.dotenv
 ms-python.python

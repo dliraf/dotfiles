@@ -48,10 +48,12 @@
         "**/*.scss"
     ],
     "window.zoomLevel": 0,
+    "workbench.editor.enablePreview": false
     "workbench.iconTheme": "material-icon-theme",
     "workbench.colorTheme": "Dracula",
     "java.semanticHighlighting.enabled": true,
     "cSpell.userWords": [
+        "Quarkus",
         "autoconfigure",
         "biodome",
         "grpc",
@@ -76,6 +78,14 @@
         {
             "sha256": "96f793a18e056c23ffeec67c1f3bb8eccff5a4a407fc9ceac183527e7eedf4b6",
             "allowed": true
+        },
+        {
+            "sha256": "70239e6ca1f0d5e3b2808ef6d82390cf9ad58d3a3a0d271677a51d1b89475857",
+            "allowed": true
+        },
+        {
+            "sha256": "76b12da7f4a7cdd025e5996811a2e49bf5df0fb62d72554ab555c0e434b63aae",
+            "allowed": true
         }
     ],
     "todo-tree.tree.showScanModeButton": false,
@@ -87,5 +97,14 @@
         180
     ],
     "editor.fontFamily": "Fira Code",
-    "dashboard.projectData": null
+    "dashboard.projectData": null,
+    "explorer.confirmDragAndDrop": false,
+    "java.refactor.renameFromFileExplorer": "autoApply",
+    "projectManager.git.baseFolders": [
+        "$home/Techyon/"
+    ],
+    "cSpell.enableFiletypes": [
+        "!c"
+    ],
+    "cSpell.language": "en,en-US"
 }
