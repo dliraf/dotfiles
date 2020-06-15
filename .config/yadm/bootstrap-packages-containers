@@ -6,6 +6,7 @@ yay -S --needed --norebuild --nouseask --noredownload --noconfirm --batchinstall
   docker-compose \
   dockly \
   fluxctl-bin \
+  helm \
   istio-bin \
   k9s \
   krew-bin \
@@ -13,8 +14,8 @@ yay -S --needed --norebuild --nouseask --noredownload --noconfirm --batchinstall
   kubebox \
   kubectx \
   kubespy \
-  helm \
   kubetail \
+  lens-bin \
   minikube-bin \
   operator-sdk \
   popeye
