@@ -52,7 +52,6 @@ ritwickdey.LiveServer
 shardulm94.trailing-spaces
 shd101wyy.markdown-preview-enhanced
 sozercan.slack
-streetsidesoftware.code-spell-checker
 tht13.python
 VisualStudioExptTeam.vscodeintellicode
 vscjava.vscode-java-debug
