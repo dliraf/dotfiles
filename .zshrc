@@ -44,7 +44,7 @@ _load_settings "$HOME/.zsh/configs"
 # Local config
 [[ -f ~/.zshrc.local ]] && source ~/.zshrc.local
 
-PATH=~/bin:~/.go/bin/:$PATH
+PATH=~/bin:~/.dotfiles-private/bin:~/.go/bin/:$PATH
 
 # aliases
 [[ -f ~/.dotfiles-private/.aliases ]] && source ~/.dotfiles-private/.aliases

@@ -50,4 +50,4 @@ if [[ -f ~/.aliases.local ]]; then
   source ~/.aliases.local
 fi
 
-
+alias uncommited='find . -maxdepth 1 -mindepth 1 -type d -exec sh -c "(echo {} && cd {} && git status -s && echo)" \;'
