@@ -20,6 +20,7 @@ foxundermoon.shell-format
 fwcd.kotlin
 GitHub.vscode-pull-request-github
 Gruntfuggly.todo-tree
+hashicorp.terraform
 IBM.output-colorizer
 johnpapa.vscode-peacock
 kamikillerto.vscode-colorize
@@ -32,6 +33,7 @@ lostintangent.vsls-whiteboard
 mads-hartmann.bash-ide-vscode
 mhutchie.git-graph
 mikestead.dotenv
+ms-azuretools.vscode-docker
 ms-python.python
 ms-vscode.Go
 ms-vsliveshare.vsliveshare
