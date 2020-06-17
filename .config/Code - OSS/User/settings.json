@@ -48,7 +48,7 @@
         "**/*.scss"
     ],
     "window.zoomLevel": 0,
-    "workbench.editor.enablePreview": false
+    "workbench.editor.enablePreview": false,
     "workbench.iconTheme": "material-icon-theme",
     "workbench.colorTheme": "Dracula",
     "java.semanticHighlighting.enabled": true,
