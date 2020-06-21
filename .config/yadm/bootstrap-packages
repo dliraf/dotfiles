@@ -34,6 +34,7 @@ yay -S --needed --norebuild --nouseask --noredownload --noconfirm --batchinstall
   ruby-colorls \
   terminator \
   thefuck \
+  tk \
   ttf-fira-code
   ttf-font-awesome-4 \
   w3m \
