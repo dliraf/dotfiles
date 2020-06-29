@@ -35,6 +35,11 @@ sudo systemctl enable sshd.service
 sudo gpasswd -a $USER vboxusers
 sudo gpasswd -a $USER docker
 
+# npm, local installs
+# https://docs.npmjs.com/resolving-eacces-permissions-errors-when-installing-packages-globally#manually-change-npms-default-directory
+mkdir ~/.npm-global
+npm config set prefix '~/.npm-global'
+
 # Nextcloud instead
 [[ -d ~/Desktop ]] && rmdir ~/Desktop
 [[ -d ~/Documents ]] && rmdir ~/Documents

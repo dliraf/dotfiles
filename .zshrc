@@ -46,6 +46,9 @@ _load_settings "$HOME/.zsh/configs"
 
 PATH=~/bin:~/.dotfiles-private/bin:~/.go/bin/:$PATH
 
+# npm, local install
+PATH=~/.npm-global/bin:$PATH
+
 # aliases
 [[ -f ~/.dotfiles-private/.aliases ]] && source ~/.dotfiles-private/.aliases
 [[ -f ~/.aliases ]] && source ~/.aliases
