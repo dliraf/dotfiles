@@ -56,7 +56,6 @@ shardulm94.trailing-spaces
 shd101wyy.markdown-preview-enhanced
 silvenon.mdx
 sozercan.slack
-tht13.python
 VisualStudioExptTeam.vscodeintellicode
 vscjava.vscode-java-debug
 vscjava.vscode-java-dependency
