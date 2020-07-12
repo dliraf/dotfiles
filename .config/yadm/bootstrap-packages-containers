@@ -8,6 +8,7 @@ yay -S --needed --norebuild --nouseask --noredownload --noconfirm --batchinstall
   fluxctl-bin \
   helm \
   istio-bin \
+  k3d \
   k9s \
   krew-bin \
   kube-score \
