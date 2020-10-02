@@ -3,5 +3,5 @@
 while read EXTENSION
 do
     echo  "Install VSCode Extension: $EXTENSION"
-    code --install-extension $EXTENSION
+    code --install-extension --force $EXTENSION
 done < $HOME/.config/yadm/vscode-extensions.txt

@@ -59,6 +59,7 @@ yay -S --needed --norebuild --nouseask --noredownload --noconfirm --batchinstall
   virtualbox \
   youtube-dl \
   yq \
+  webhook \
   woof \
   wttr \
   wuzz
