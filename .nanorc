@@ -16,7 +16,7 @@ set suspend
 set tabsize 2
 
 ## Convert typed tabs to spaces.
-set tabstospaces
+#set tabstospaces
 
 ## Detect word boundaries more accurately by treating punctuation
 ## characters as parts of words.

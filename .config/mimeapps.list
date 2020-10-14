@@ -20,6 +20,7 @@ application/x-bittorrent=deluge.desktop
 x-scheme-handler/about=chromium.desktop
 x-scheme-handler/unknown=chromium.desktop
 x-scheme-handler/gitkraken=GitKraken.desktop
+x-scheme-handler/msteams=teams.desktop
 
 [Added Associations]
 image/jpeg=viewnior.desktop;gpicview.desktop;
