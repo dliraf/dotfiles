@@ -6,7 +6,7 @@ yay -S --needed --norebuild --nouseask --noredownload --noconfirm --batchinstall
   atool \
   bat \
   bcal-git \
-  bloomrpc-bin \
+  bloomrpc \
   bmon \
   bookworm \
   buf-bin \
