@@ -1,5 +1,6 @@
 #!/bin/bash
 
+exit 0
 while read EXTENSION
 do
     echo  "Install VSCode Extension: $EXTENSION"

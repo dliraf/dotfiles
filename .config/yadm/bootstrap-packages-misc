@@ -48,6 +48,7 @@ yay -S --needed --norebuild --nouseask --noredownload --noconfirm --batchinstall
   nodejs-git-stats \
   odt2txt \
   openjdk11-src \
+  pdftk \
   poppler \
   protobuf-go \
   python-chardet \
@@ -61,8 +62,6 @@ yay -S --needed --norebuild --nouseask --noredownload --noconfirm --batchinstall
   youtube-dl \
   yq \
   webhook \
-  woof \
-  wttr \
   wuzz
 
 for kernel in $(mhwd-kernel -li | grep " linux" | awk '{print $2}')

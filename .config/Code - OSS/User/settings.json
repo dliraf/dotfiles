@@ -107,5 +107,6 @@
         "!c"
     ],
     "cSpell.language": "en,en-US",
-    "vsicons.dontShowNewVersionMessage": true
+    "vsicons.dontShowNewVersionMessage": true,
+    "java.project.importOnFirstTimeStartup": "automatic"
 }
