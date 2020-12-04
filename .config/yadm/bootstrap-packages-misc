@@ -34,7 +34,6 @@ yay -S --needed --norebuild --nouseask --noredownload --noconfirm --batchinstall
   http-prompt \
   httpie \
   httplab \
-  jdk11-graalvm-bin \
   jdk11-openjdk \
   jq \
   lazygit \

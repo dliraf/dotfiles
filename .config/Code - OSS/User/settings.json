@@ -108,5 +108,6 @@
     ],
     "cSpell.language": "en,en-US",
     "vsicons.dontShowNewVersionMessage": true,
-    "java.project.importOnFirstTimeStartup": "automatic"
+    "java.project.importOnFirstTimeStartup": "automatic",
+    "python.languageServer": "Microsoft"
 }
