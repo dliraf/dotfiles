@@ -16,6 +16,7 @@ yay -S --needed --norebuild --nouseask --noredownload --noconfirm --batchinstall
   kubectx \
   kubespy \
   kubetail \
+  kubeval-bin \
   lens-bin \
   minikube-bin \
   operator-sdk \
