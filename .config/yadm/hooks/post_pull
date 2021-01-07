@@ -10,7 +10,7 @@ yadm submodule update --recursive --remote
 direnv allow ~/Env/minikube
 
 BASEDIR=$(dirname "$0")
-if ! grep -q git@github.com:dliraf "$HOME/.config/yadm/repo.git/config"; then
+if ! grep -q git@github.com:dliraf "$HOME/.local/share/yadm/repo.git/config"; then
   exit
 fi
 
